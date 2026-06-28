@@ -1,0 +1,26 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+
+# Sensitive — real pipeline data, never commit
+*.db
+*.db-wal
+*.db-shm
+data/
+
+# Local machine settings
+.claude/settings.local.json
+
+# Internal source-of-truth doc (kept local; public repo uses README.md)
+project.md
+
+# Secrets / env (keep .env.example tracked as the template)
+*.env
+.env
+.env.local
+.env.*.local
+!.env.example
+*.pem
+*.key
+secrets*

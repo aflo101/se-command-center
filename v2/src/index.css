@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* SE Command Neon-Cyber Theme */
+:root {
+  --neon-cyan: #00ffff;
+  --neon-gold: #ffcc00;
+  --neon-purple: #a855f7;
+  --bg-dark: #0a0a12;
+  --bg-card: #12121a;
+  --bg-card-hover: #1a1a24;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-cyan);
+  box-shadow: 0 0 10px var(--neon-cyan);
+}
+
+/* Reset body centering from Vite default */
+body {
+  margin: 0;
+  display: block;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "SF Mono", "Monaco", "Menlo", monospace;
+}
+
+/* Grid background */
+.grid-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image:
+    linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Gradient text utility */
+.gradient-text-cyan {
+  background: linear-gradient(90deg, var(--neon-cyan), #00cccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Neon glow utilities */
+.neon-glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+/* Animation for loading spinner */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Icon pulse animation */
+@keyframes iconPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.4); }
+  50% { box-shadow: 0 0 40px rgba(0, 255, 255, 0.6); }
+}
+
+.animate-icon-pulse {
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+/* Gradient border utility */
+.gradient-border-bottom {
+  border-image: linear-gradient(90deg, var(--neon-cyan), #00cccc) 1;
+}
